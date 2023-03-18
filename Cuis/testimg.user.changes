@@ -1,0 +1,195 @@
+
+
+----STARTUP---- (17 March 2023 18:12:37) as /home/rpetey317/Code/algoritmos3/Cuis/CuisUniversity-5690.image!
+
+
+----SNAPSHOT----(17 March 2023 18:22:21) testimg.image priorSource: 8649239!
+
+1.!
+
+-1.!
+
+3.14.!
+
+true.!
+
+false.!
+
+nil.!
+
+nil.!
+
+meter.!
+
+meter.!
+
+centimeter.!
+
+hour.!
+
+minute.!
+
+day.!
+
+March.!
+
+Monday.!
+
+'hola'.!
+
+$h.!
+
+meter. !
+
+$h. !
+
+10 factorial .!
+
+100 factorial .!
+
+100 factorial / 99 factorial .!
+
+true not.!
+
+false not.!
+
+true & true.!
+
+false & false.!
+
+true & false.!
+
+true | false.!
+
+false | false.!
+
+10*meter .!
+
+(10*meter )+(20*meter).!
+
+(10*meter)+(200*centimeter).!
+
+10*hour!
+
+10*hour.!
+
+(10*hour)+(60*minute). !
+
+(10*hour)+(60*minute) convertTo: hour .!
+
+March/21.!
+
+March/21/2019.!
+
+January/1/2019 distanceTo: March/21/2019.!
+
+March/21/2019 at: 18:30.!
+
+1.!
+
+$h.  !
+
+nil.!
+
+$h. !
+
+nil.!
+
+10 factorial . 3628800 .!
+
+100 factorial . 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000 .!
+
+100 factorial . 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000 .!
+
+10 factorial . 3628800 .!
+
+10 factorial . 3628800 .!
+
+10 factorial . 3628800 .!
+
+ObjectBuilder create: #UnObjeto asChildOf: DenotativeObject collaboratorNames: '' in: 'UnaCategoria'!
+
+!classDefinition: #UnObjeto category: 'UnaCategoria' stamp: 'RABG 3/17/2023 19:21:55'!
+DenotativeObject subclass: #UnObjeto
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'UnaCategoria'!
+
+!classDefinition: 'UnObjeto class' category: 'UnaCategoria' stamp: 'RABG 3/17/2023 19:21:55'!
+UnObjeto class
+	instanceVariableNames: ''!
+!UnObjeto class methodsFor: 'nil' stamp: 'RABG 3/17/2023 19:29:06'!
+messageSelectorAndArgumentNames
+	"comment stating purpose of message"
+
+	| variable names |
+	#statements
+! !
+!UnObjeto class methodsFor: 'as yet unclassified' stamp: 'RABG 3/17/2023 19:29:44' prior: 50601997!
+messageSelectorAndArgumentNames
+	"comment stating purpose of message"
+
+	| variable names |
+	#encender
+	
+! !
+!UnObjeto class methodsFor: 'as yet unclassified' stamp: 'RABG 3/17/2023 19:30:56' prior: 50602004!
+messageSelectorAndArgumentNames
+	"comment stating purpose of message"
+
+	
+	#encender
+	
+	
+! !
+
+!classRenamed: #UnObjeto as: #auto stamp: 'RABG 3/17/2023 19:34:20'!
+Smalltalk renameClassNamed: #UnObjeto as: #auto!
+!auto class methodsFor: 'nil' stamp: 'RABG 3/17/2023 19:35:20' prior: 50602011!
+messageSelectorAndArgumentNames
+	"comment stating purpose of message"
+
+	
+	#encender.
+	#apagar.
+	#acelerar.
+	#frenar.
+	#abrirBaul.
+	! !
+!auto class methodsFor: 'as yet unclassified' stamp: 'RABG 3/17/2023 19:39:04'!
+encender.
+
+	! !
+
+!methodRemoval: auto class #messageSelectorAndArgumentNames stamp: 'RABG 3/17/2023 19:39:14'!
+messageSelectorAndArgumentNames
+	"comment stating purpose of message"
+
+	
+	#encender.
+	#apagar.
+	#acelerar.
+	#frenar.
+	#abrirBaul.
+	!
+!auto class methodsFor: 'as yet unclassified' stamp: 'RABG 3/17/2023 19:39:22' prior: 50602028!
+encender
+
+	! !
+!auto class methodsFor: 'as yet unclassified' stamp: 'RABG 3/17/2023 19:39:55'!
+apagar! !
+!auto class methodsFor: 'nil' stamp: 'RABG 3/17/2023 19:40:11'!
+acelerar
+! !
+!auto class methodsFor: 'nil' stamp: 'RABG 3/17/2023 19:40:22'!
+frenar
+! !
+!auto class methodsFor: 'as yet unclassified' stamp: 'RABG 3/17/2023 19:40:24' prior: 50602048!
+frenar
+
+! !
+!auto class methodsFor: 'nil' stamp: 'RABG 3/17/2023 19:40:33'!
+abrirBaul! !
+
+----QUIT----(17 March 2023 20:24:30) testimg.image priorSource: 8649436!
