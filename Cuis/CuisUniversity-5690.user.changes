@@ -20,3 +20,57 @@
 asdads!
 
 ----QUIT----(17 March 2023 18:12:32) CuisUniversity-5690.image priorSource: 8649027!
+
+----STARTUP---- (19 March 2023 16:40:00) as /home/rpetey317/repos/algoritmos3/Cuis/CuisUniversity-5690.image!
+
+
+ObjectBuilder create: #AlanTuring asChildOf: DenotativeObject collaboratorNames: '' in: 'Testing'!
+
+!classDefinition: #AlanTuring category: 'Testing' stamp: 'RABG 3/19/2023 16:41:00'!
+DenotativeObject subclass: #AlanTuring
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'AlanTuring class' category: 'Testing' stamp: 'RABG 3/19/2023 16:41:00'!
+AlanTuring class
+	instanceVariableNames: ''!
+
+AlanTuring fechaDeNacimiento.!
+
+AlanTuring fechaDeNacimiento.!
+
+AlanTuring fechaDeNacimiento.!
+
+AlanTuring printString.!
+
+AlanTuring fechaDeNacimiento.!
+!AlanTuring class methodsFor: 'info personal' stamp: 'RABG 3/19/2023 16:44:00'!
+fechaDeNacimiento
+	self shouldBeImplemented.! !
+
+	June/23/1912!
+!AlanTuring class methodsFor: 'info personal' stamp: 'RABG 3/19/2023 16:44:33' prior: 50601965!
+fechaDeNacimiento
+	^June/23/1912! !
+
+ObjectBuilder create: #JohnVonNeumann asChildOf: DenotativeObject collaboratorNames: '' in: 'Testing'!
+
+!classDefinition: #JohnVonNeumann category: 'Testing' stamp: 'RABG 3/19/2023 16:46:34'!
+DenotativeObject subclass: #JohnVonNeumann
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'JohnVonNeumann class' category: 'Testing' stamp: 'RABG 3/19/2023 16:46:34'!
+JohnVonNeumann class
+	instanceVariableNames: ''!
+!JohnVonNeumann class methodsFor: 'nil' stamp: 'RABG 3/19/2023 16:46:47'!
+fechaDeNacimiento
+	^December/28/1903! !
+
+JohnVonNeumann fechaDeNacimiento inspect .!
+
+----QUIT----(20 March 2023 00:28:24) CuisUniversity-5690.image priorSource: 8649239!
