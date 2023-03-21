@@ -74,3 +74,126 @@ fechaDeNacimiento
 JohnVonNeumann fechaDeNacimiento inspect .!
 
 ----QUIT----(20 March 2023 00:28:24) CuisUniversity-5690.image priorSource: 8649239!
+
+----STARTUP---- (21 March 2023 19:47:14) as /home/rpetey317/Code/algoritmos3/Cuis/CuisUniversity-5690.image!
+
+
+JohnVonNeumann fechaDeNacimiento inspect .!
+
+ObjectBuilder create: #AlanKay asChildOf: DenotativeObject collaboratorNames: '' in: 'Testing'!
+
+!classDefinition: #AlanKay category: 'Testing' stamp: 'RABG 3/21/2023 20:25:15'!
+DenotativeObject subclass: #AlanKay
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'AlanKay class' category: 'Testing' stamp: 'RABG 3/21/2023 20:25:15'!
+AlanKay class
+	instanceVariableNames: ''!
+!AlanKay class methodsFor: 'nil' stamp: 'RABG 3/21/2023 20:25:44'!
+fechaDeNacimiento
+	^June/23/1912! !
+!AlanKay class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:26:42' prior: 50602017!
+fechaDeNacimiento
+	May^17/1940! !
+!AlanKay class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:27:56'!
+esMayorQue: unaPersona
+	| diferenciaDeEdad |
+	diferenciaDeEdad := self fechaDeNacimiento  distanceTo: unaPersona fechaDeNacimiento .
+	^diferenciaDeEdad positive ! !
+!AlanKay class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:31:53' prior: 50602022!
+fechaDeNacimiento
+	May/17/1940! !
+!AlanKay class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:32:05' prior: 50602035!
+fechaDeNacimiento
+	^May/17/1940! !
+
+ObjectBuilder create: #AdeleGoldberg asChildOf: DenotativeObject collaboratorNames: '' in: 'Testing'!
+
+!classDefinition: #AdeleGoldberg category: 'Testing' stamp: 'RABG 3/21/2023 20:36:29'!
+DenotativeObject subclass: #AdeleGoldberg
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:36:29'!
+AdeleGoldberg class
+	instanceVariableNames: ''!
+!AdeleGoldberg class methodsFor: 'no messages' stamp: 'RABG 3/21/2023 20:37:15'!
+fechaDeNacimiento
+	^July/22/1945! !
+
+AdeleGoldberg
+	collaboratorNames: 'colegaDeTrabajo'
+	in: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:38:00'!
+AdeleGoldberg class
+	instanceVariableNames: 'colegaDeTrabajo'!
+
+!classDefinition: #AdeleGoldberg category: 'Testing' stamp: 'RABG 3/21/2023 20:38:01'!
+DenotativeObject subclass: #AdeleGoldberg
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:38:01'!
+AdeleGoldberg class
+	instanceVariableNames: 'colegaDeTrabajo'!
+
+AdeleGoldberg
+	collaboratorNames: 'AlanKay'
+	in: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:38:42'!
+AdeleGoldberg class
+	instanceVariableNames: 'AlanKay'!
+
+!classDefinition: #AdeleGoldberg category: 'Testing' stamp: 'RABG 3/21/2023 20:38:42'!
+DenotativeObject subclass: #AdeleGoldberg
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:38:42'!
+AdeleGoldberg class
+	instanceVariableNames: 'AlanKay'!
+
+AdeleGoldberg
+	collaboratorNames: 'colegaDeTrabajo'
+	in: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:39:42'!
+AdeleGoldberg class
+	instanceVariableNames: 'colegaDeTrabajo'!
+
+!classDefinition: #AdeleGoldberg category: 'Testing' stamp: 'RABG 3/21/2023 20:39:42'!
+DenotativeObject subclass: #AdeleGoldberg
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Testing'!
+
+!classDefinition: 'AdeleGoldberg class' category: 'Testing' stamp: 'RABG 3/21/2023 20:39:42'!
+AdeleGoldberg class
+	instanceVariableNames: 'colegaDeTrabajo'!
+!AdeleGoldberg class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:40:16'!
+esMenorQueSuColega
+	^colegaDeTrabajo esMayorQue: self! !
+!AdeleGoldberg class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:40:33'!
+esMayorQue: unaPersona
+	| diferenciaDeEdad |
+	diferenciaDeEdad := self fechaDeNacimiento  distanceTo: unaPersona fechaDeNacimiento .
+	^diferenciaDeEdad positive ! !
+
+AdeleGoldberg esMenorQueSuColega !
+!AdeleGoldberg class methodsFor: 'as yet unclassified' stamp: 'RABG 3/21/2023 20:45:02'!
+colegaDeTrabajo
+	^colegaDeTrabajo! !
+
+----QUIT----(21 March 2023 20:51:27) CuisUniversity-5690.image priorSource: 8651028!
