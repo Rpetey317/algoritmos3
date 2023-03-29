@@ -197,3 +197,265 @@ colegaDeTrabajo
 	^colegaDeTrabajo! !
 
 ----QUIT----(21 March 2023 20:51:27) CuisUniversity-5690.image priorSource: 8651028!
+
+----STARTUP---- (21 March 2023 20:57:31) as /home/rpetey317/Code/algoritmos3/Cuis/CuisUniversity-5690.image!
+
+
+March  distanceTo: December !
+
+Array with: 1 with: 10 with: 100!
+
+'Hola Gente!!' copyFrom: 2  to: 8 !
+
+'hola' size + 'chau' size.!
+
+'hola', 'chau'!
+
+'hola', 'chau' size.!
+
+'hola', 'chau' size.!
+
+'hola', 'chau' size.!
+
+----STARTUP---- (28 March 2023 19:09:25) as /home/rpetey317/Code/algoritmos3/Cuis/CuisUniversity-5690.image!
+
+!AlanTuring class methodsFor: 'info personal' stamp: 'RABG 3/28/2023 19:22:16' overrides: 50579878!
+doesNotUnderstand: aMessage
+
+	^'No entiendo lo que me quieres decir con ', aMessage  asString ! !
+
+AlanTuring asdad.!
+!AlanTuring class methodsFor: 'info personal' stamp: 'RABG 3/28/2023 19:24:17' prior: 50602156 overrides: 50579878!
+doesNotUnderstand: aMessage
+
+	^'No entiendo lo que me quieres decir con "', aMessage  asString, '"' ! !
+
+AlanTuring lmao.!
+
+10 factorial.!
+
+[ 10 factorial ].!
+
+[ 10 factorial ] value.!
+
+[:anInteger | anInteger factorial ] value: 10.!
+
+[:anInteger | anInteger factorial ] value: 100.  !
+
+factorialBlock value:10  !
+
+factorialBlock value: 10.  !
+
+factorialBlock := [:anInteger | anInteger factorial ].!
+
+factorialBlock value: 10.  !
+
+factorialSumBlock value: 10 value: 20.!
+
+factorialSumBlock  [ :anIntegerToFact1 :anIntegerToFact2 | anIntegerToFact1 factorial + anIntegerToFact2 factorial ].!
+
+factorialBlock  [:anInteger | anInteger factorial ].!
+
+factorialSumBlock value: 10 value: 20.!
+
+factorialSumBlock  [ :anIntegerToFact1 :anIntegerToFact2 | anIntegerToFact1 factorial + anIntegerToFact2 factorial ].!
+
+factorialSumBlock valueWithArguments: #(10 20).!
+
+plusTenByTwentyBlock   [:anAdder || anAdderPlusTen |
+	anAdderPlusTen  anAdder + 10.
+	anAdderPlusTen * 20].!
+
+plusTenByTwentyBlock value: 5.!
+
+plusTenByTwentyBlock value: 100. !
+
+plusTenByTwentyBlock   [:anAdder | | anAdderPlusTen |
+	anAdderPlusTen  anAdder + 10.
+	anAdderPlusTen * 20].!
+
+sum  0.!
+
+sum. !
+
+sum  0.
+5 timesRepeat: [sum  sum + 10].
+sum. !
+
+sum  0.
+[sum < 50] whileTrue: [sum  sum + 10].
+sum.!
+
+sum  0.
+#(1 2 3 4 5) do: [:anInteger | sum  sum + anInteger ].
+sum.!
+
+#(1 2 3 4 5) inject: 0 into: [:acum :anInteger | acum + anInteger]!
+
+10 > 5 ifTrue: ['Si!! Diez es mayor que cinco.'] ifFalse: ['No, no lo es']!
+
+#fechaDeNacimiento asMessage  sendTo:  JohnVonNeumann .!
+
+(#esMayorQue: asMessageWith: JohnVonNeumann ) sendTo: AlanKay !
+
+fechaDeNacimiento!
+
+#fechaDeNacimiento asMessage  sendTo:  JohnVonNeumann .!
+
+#fechaDeNacimiento asMessage .!
+
+#esMayorQue: asMessageWith:  JohnVonNeumann .!
+
+#fechaDeNacimiento asMessage .!
+
+self sendTo: AlanTuring .!
+
+self sendTo: JohnVonNeumann .!
+
+self sendTo: AlanKay .!
+
+AlanTuring methodNamed: #fechaDeNacimiento.!
+
+JohnVonNeumann methodNamed: #fechaDeNacimiento.!
+
+AlanTuring methodNamed: #fechaDeNacimiento.!
+
+self sourceCode .!
+
+linesOfCode!
+
+self linesOfCode .!
+
+self linesOfCode .!
+
+self sourceCode .!
+
+self valueWithReceiver: AlanTuring arguments: #()!
+
+self valueWithReceiver: JohnVonNeumann arguments: #() !
+
+self valueWithReceiver: JohnVonNeumann arguments: #() !
+
+self valueWithReceiver: AlanTuring arguments: #() !
+
+self list length !
+
+self list length .!
+
+self list!
+
+AlanTuring!
+
+AlanTuring methodNamed: #fechaDeNacimiento.!
+
+self instVarAt: 2!
+
+self instVarAt: list!
+
+self instVarNamed: list!
+
+self instVarNamed: 'list'!
+
+self instVarNamed: 'list'!
+
+self instVarNamed: 'list' !
+
+self instVarNamed: 'list' !
+
+self instVarNamed: 'list' lineCount !
+
+self instVarNamed: 'list' lines !
+
+(self instVarNamed: 'list') asString!
+
+(self instVarNamed: 'list') asString lineCount !
+
+self instVarNamed: 'list'!
+
+self instVarNamed: 'list' items !
+
+self instVarNamed: 'list' item!
+
+str count!
+
+self instVarNamed: 'list' length !
+
+self instVarNamed: 'list' length !
+
+self instVarNamed: 'list'!
+
+(self instVarNamed: 'list') methodDictionary !
+
+(self instVarNamed: 'list') methodDict !
+
+(self instVarNamed: 'list') methods !
+
+(self instVarNamed: 'list') methodCategories !
+
+(self instVarNamed: 'list') array !
+
+(self instVarNamed: 'list') !
+
+(self instVarNamed: 'list') instanceCount !
+
+(self instVarNamed: 'list') instanceCount !
+
+(self instVarNamed: 'list') instVarNames !
+
+(self instVarNamed: 'list') !
+
+(self instVarNamed: 'list') instVarNames !
+
+(self instVarNamed: 'list') types!
+
+(self instVarNamed: 'list') typesSize !
+
+self instVarNamed: 'list' typesSize !
+
+(self instVarNamed: 'list') typesSize !
+
+(self instVarNamed: 'list') typesSize !
+
+(self instVarNamed: 'list') typesSize !
+
+self setSelectionIndex: 1.!
+
+self setSelectionIndex: 1.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3 .!
+
+self setSelectionIndex: 1 .!
+
+self selection: #fail .!
+
+self setSelectionIndex: 1.!
+
+self setSelectionIndex: 1.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 3.!
+
+self setSelectionIndex: 7.!
+
+(self instVarNamed: 'getIndexSelector')!
+
+(self instVarNamed: 'getIndexSelector') sourceCode!
+
+(self instVarNamed: 'getIndexSelector') !
+
+(self instVarNamed: 'getIndexSelector') asMessage sendTo: self!
+
+----QUIT----(28 March 2023 21:32:51) CuisUniversity-5690.image priorSource: 8655620!
