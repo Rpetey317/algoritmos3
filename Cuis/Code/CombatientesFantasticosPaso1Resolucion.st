@@ -9,7 +9,11 @@ DenotativeObject subclass: #Arthas
 
 !classDefinition: 'Arthas class' category: 'CombatientesFantasticosPaso1'!
 Arthas class
-	instanceVariableNames: 'vidaActual dañoARealizar armaduraActual'!
+	instanceVariableNames: 'armaduraActual dañoARealizar vidaActual enemigos foco'!
+
+!Arthas class methodsFor: 'Stats' stamp: 'RABG 3/31/2023 19:49:23'!
+enemigos: listaDeEnemigos
+	enemigos := listaDeEnemigos ! !
 
 !Arthas class methodsFor: 'Stats' stamp: 'RABG 3/31/2023 19:20:25'!
 puntosDeVida
@@ -25,28 +29,66 @@ equiparHacha
 	dañoARealizar := 10.! !
 
 
-!Arthas class methodsFor: 'Acciones' stamp: 'RABG 3/31/2023 19:42:12'!
-atacar! !
+!Arthas class methodsFor: 'Cambiar Foco' stamp: 'RABG 4/4/2023 19:18:44'!
+focalizarEnElMasHerido
+	foco := [: unosEnemigos | unosEnemigos detectMin: [: unEnemigo | unEnemigo puntosDeVida ]].! !
+
+!Arthas class methodsFor: 'Cambiar Foco' stamp: 'RABG 4/4/2023 19:19:15'!
+focalizarEnElMasSano
+	foco := [: unosEnemigos | unosEnemigos detectMax: [: unEnemigo | unEnemigo puntosDeVida ]]! !
+
+!Arthas class methodsFor: 'Cambiar Foco' stamp: 'RABG 4/4/2023 19:20:26'!
+focalizarEnUnoAleatorio
+	foco := [:unosEnemigos | unosEnemigos anyOne ]! !
+
+
+!Arthas class methodsFor: 'Acciones' stamp: 'RABG 4/4/2023 19:34:33'!
+atacar
+	|enemigoAAtacar|
+	enemigos ifEmpty: [^self].
+	
+	enemigoAAtacar  := foco valueWithArguments: {enemigos} .
+	self atacarA: enemigoAAtacar ! !
 
 !Arthas class methodsFor: 'Acciones' stamp: 'RABG 3/31/2023 19:14:09'!
 atacarA: unaVictima
 	unaVictima recibeDaño: dañoARealizar .! !
 
-!Arthas class methodsFor: 'Acciones' stamp: 'RABG 3/31/2023 19:14:51'!
+!Arthas class methodsFor: 'Acciones' stamp: 'RABG 3/31/2023 20:22:20'!
+elegirEnemigoSegunEstrategia
+
+	|estrategia|
+
+	foco = #ElMasHerido
+		ifTrue: [estrategia := [: unosEnemigos | unosEnemigos detectMin: [: unEnemigo | unEnemigo puntosDeVida ]]].
+
+	foco = #ElMasSano
+		ifTrue: [estrategia := [: unosEnemigos | unosEnemigos detectMax: [: unEnemigo | unEnemigo puntosDeVida ]]].
+		
+	foco = #CualquierEnemigo
+		ifTrue: [estrategia := [enemigos anyOne ]].
+			
+	^estrategia value.! !
+
+!Arthas class methodsFor: 'Acciones' stamp: 'RABG 4/4/2023 19:31:42'!
 reestablecer
 	vidaActual := 20.
 	dañoARealizar  := 2.
 	armaduraActual := 0.
-	! !
+	enemigos  := #().	
+	foco := [:unosEnemigos | unosEnemigos anyOne ].! !
 
 
-!Arthas class methodsFor: '--** private fileout/in **--' stamp: 'RABG 3/31/2023 19:44:04'!
+!Arthas class methodsFor: '--** private fileout/in **--' stamp: 'RABG 4/4/2023 19:39:16'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
-	vidaActual := 20.
+	armaduraActual := 0.
 	dañoARealizar := 2.
-	armaduraActual := 0.! !
+	vidaActual := 20.
+	enemigos := ((Array new: 2) at: 1 put: Olgra; at: 2 put: Mankrik; yourself).
+	foco := ((SerializableBlockClosure basicNew instVarAt: 1 put: Arthas; instVarAt: 2 put: '[ :argm4_1 |
+	argm4_1 anyOne. ]'; instVarAt: 3 put: #(); yourself) asEvaluable).! !
 
 
 !classDefinition: #CombatientesTest category: 'CombatientesFantasticosPaso1'!
@@ -66,19 +108,19 @@ CombatientesTest class
 combatienteHumanoArthas
 	^Arthas ! !
 
-!CombatientesTest class methodsFor: 'para completar' stamp: 'SF 8/27/2022 06:09:57'!
+!CombatientesTest class methodsFor: 'para completar' stamp: 'RABG 3/31/2023 19:48:16'!
 combatienteOrcoMankrik
-	Assert isTrue: false description: 'Reemplazar esto por la implementación correspondiente'! !
+	^Mankrik ! !
 
 !CombatientesTest class methodsFor: 'para completar' stamp: 'RABG 3/31/2023 17:53:55'!
 combatienteOrcoOlgra
 	^Olgra! !
 
-!CombatientesTest class methodsFor: 'para completar' stamp: 'RABG 3/31/2023 19:11:14'!
+!CombatientesTest class methodsFor: 'para completar' stamp: 'RABG 3/31/2023 19:48:02'!
 comenzarUnNuevoCombate
 	self combatienteOrcoOlgra reestablecer.
 	self combatienteHumanoArthas reestablecer.
-	! !
+	self combatienteOrcoMankrik reestablecer.	! !
 
 
 !CombatientesTest class methodsFor: 'combatientes tests' stamp: 'SF 8/27/2022 05:58:49'!
@@ -248,13 +290,13 @@ equiparArmaduraDeMetal
 	armaduraActual := 6.! !
 
 
-!Mankrik class methodsFor: '--** private fileout/in **--' stamp: 'RABG 3/31/2023 19:44:04'!
+!Mankrik class methodsFor: '--** private fileout/in **--' stamp: 'RABG 4/4/2023 19:39:17'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
 	dañoARealizar := 20.
 	vidaActual := 20.
-	armaduraActual := 6.! !
+	armaduraActual := 0.! !
 
 
 !classDefinition: #Olgra category: 'CombatientesFantasticosPaso1'!
@@ -304,13 +346,13 @@ equiparArmaduraDeMetal
 	armaduraActual := 6.! !
 
 
-!Olgra class methodsFor: '--** private fileout/in **--' stamp: 'RABG 3/31/2023 19:44:04'!
+!Olgra class methodsFor: '--** private fileout/in **--' stamp: 'RABG 4/4/2023 19:39:17'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
 	dañoARealizar := 20.
-	vidaActual := 20.
-	armaduraActual := 6.! !
+	vidaActual := 18.
+	armaduraActual := 0.! !
 
 Arthas initializeAfterFileIn!
 Mankrik initializeAfterFileIn!
